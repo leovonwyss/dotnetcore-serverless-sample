@@ -23,8 +23,7 @@ Steps to build and deploy the sample:
 * Build the web app using  `dotnet build WebApiDemo`
 * Build the CDK script using  `dotnet build WebApiDemo`
 * Deploy the site to AWS using `cd Cdk && cdk deploy`
-
-You will see an output similar to this:
-`LambdaWebApiDemoStack.lburl = http://Lambd-lambd-29FADJC1E9PS-1063229254.eu-central-1.elb.amazonaws.com/WeatherForecast`
-
-Copy the Url shown and paste it into your browser. You will see the output of the sample API with some random weather forecast data.
+* You will see an output similar to this: `LambdaWebApiDemoStack.lburl = http://Lambd-lambd-29FADJC1E9PS-1063229254.eu-central-1.elb.amazonaws.com/WeatherForecast`
+* Copy the Url shown and paste it into your browser. You will see the output of the sample API with some random weather forecast data.
+* Inspect the created resources on AWS if you want to
+* Remove the resources from AWS to save costs usind `cdk destroy` when you are done
