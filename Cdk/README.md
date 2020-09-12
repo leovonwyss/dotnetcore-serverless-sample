@@ -1,14 +1,10 @@
-# Welcome to your CDK C# project!
+# Serverless asp.net core on AWS Lambda: CDK project for deployment
 
-This is a blank project for C# development with CDK.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-It uses the [.NET Core CLI](https://docs.microsoft.com/dotnet/articles/core/) to compile and execute your project.
+This simple CDK project shows how to deploy an asp.net core web
+site as an AWS Lambda function using CDK.  
 
 ## Useful commands
 
-* `dotnet build src` compile this app
+* `dotnet build` compile this app
 * `cdk deploy`       deploy this stack to your default AWS account/region
-* `cdk diff`         compare deployed stack with current state
-* `cdk synth`        emits the synthesized CloudFormation template
+* `cdk destroy`      destroys the generated stack
