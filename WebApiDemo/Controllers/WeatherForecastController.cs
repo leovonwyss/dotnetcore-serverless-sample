@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace WebApiDemo.Controllers
+namespace LeoVonwyss.AspNetServerlessSample.WebApiDemo.Controllers
 {
     [ApiController]
     [Route("[controller]")]

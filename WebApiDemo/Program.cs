@@ -1,29 +1,26 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-using Amazon.Lambda.ApplicationLoadBalancerEvents;
-using Amazon.Lambda.AspNetCoreServer;
-using Amazon.Lambda.Core;
-using Amazon.Lambda.RuntimeSupport;
-using Amazon.Lambda.Serialization.Json;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
-namespace WebApiDemo
+namespace LeoVonwyss.AspNetServerlessSample.WebApiDemo
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(ConfigureWebHostBuilder)
-                .Build()
-                .Run();
+            CreateHostBuilder(args).Build().Run();
         }
 
-        public static void ConfigureWebHostBuilder(IWebHostBuilder webHostBuilder)
-        {
-            webHostBuilder
-                .UseStartup<Startup>();
-        }
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
     }
 }

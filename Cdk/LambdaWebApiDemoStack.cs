@@ -19,7 +19,7 @@ namespace LeoVonwyss.AspNetServerlessSample.Cdk
                 
                 // Handler name: ASSEMBLY::TYPE::FUNCTION, see https://docs.aws.amazon.com/lambda/latest/dg/csharp-handler.html
                 // This tells the Lambda runtime what entry point to use in the code being deployed above
-                Handler = "WebApiDemo::WebApiDemo.LambdaEntryPoint::FunctionHandlerAsync" 
+                Handler = "WebApiDemo::LeoVonwyss.AspNetServerlessSample.WebApiDemo.LambdaEntryPoint::FunctionHandlerAsync" 
                      
             });
 
